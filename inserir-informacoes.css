@@ -1,0 +1,57 @@
+body{
+    background: linear-gradient(90deg,#8c52ff 30%,#5ce1e6);
+    text-align: center;
+    font-family:'Montserrat',sans-serif;
+}
+
+.sortear{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: #2b588f;
+    border-radius: 2rem;
+    color: white;
+    box-shadow: 5px 5px 1px black;
+}
+
+.qtd-participantes, 
+.qtd-jogadores{
+    width: 80px;
+    height: 50px;
+}
+.nomes{
+    width: 420px;
+    height: 50px;
+}
+
+/*Utilitários*/
+.mt-1{
+    margin-top: 1rem
+ }
+ .mt-2{
+    margin-top: 5rem
+ }
+ .mb-1{
+    margin-bottom: 1rem
+ }
+ .mb-2{
+    margin-bottom: 7rem
+ }
+ .mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+@media screen and (min-width: 25rem){
+    body{
+        background: linear-gradient(90deg,#8c52ff 10%,#5ce1e6);
+    }  
+}
+
+@media screen and (min-width: 70rem){
+    body{
+        background: linear-gradient(90deg,#8c52ff,#5ce1e6);
+    }
+    
+
+}
