@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserindo infos</title>
     <link rel="stylesheet" href="inserir-informacoes.css">
+    <script src="inserir-infos.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,19 +15,19 @@
     <main>
         <div class="quantidade">
             <h1>Insira abaixo a quantidade de participantes:</h1>
-            <input type = "number" name="qtd-participantes" class="qtd-participantes">
+            <input type = "number" id="qtd-participantes" class="qtd-participantes">
         </div>
         <div class="jogadores-por-time">
-            <h2>Insira a quantidade de jogadores por time</h1>
-            <input type = "number" name="jogadores-por-time" class="qtd-jogadores">
+            <h2>Insira a quantidade de jogadores por time:</h1>
+            <input type = "number" id="jogadores-por-time" class="qtd-jogadores">
         </div>
         <div class="nome-dos-jogadores">
-            <h2>Digite o nome dos participantes</h1>
-            <input type = "text" name="nome-dos-jogadores" class="nomes" placeholder="Escreva aqui os nomes que gostaria de sortear, separados por vírgula ou quebra de linha (Enter)">
+            <h2>Digite o nome dos participantes:</h1>
+            <input type = "text" id="nome-dos-jogadores" class="nomes" placeholder="Escreva aqui os nomes que gostaria de sortear, separados por vírgula ou quebra de linha (Enter)">
         </div>
     </main>
     <footer class="mt-2">
-        <a href="#" class="sortear">Sortear</a>
+        <a href="#" class="sortear" onClick="confereSeHaCamposVazios()">Sortear</a>
     </footer>
     
 </body>
