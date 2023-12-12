@@ -1,7 +1,20 @@
 body{  background: linear-gradient(to right, #5198bb,#24238a);}
 
 .btn{
-    padding: 10px 8px 
-    whinth 
-
+    padding: 10px 8px;
+    width: 50px;
+    color: rgb(35, 17, 125);
+    background: rgb(93, 136, 169);
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    user-select: nome;
+    cursor: pointer;
+    transition: 2s;
 }
+
+
+.btn:hover{
+background: rgb(136, 198, 246);
+
+}   
