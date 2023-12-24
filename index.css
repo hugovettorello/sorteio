@@ -3,12 +3,12 @@ body{  background: linear-gradient(to right, #5198bb,#24238a);}
 .btn{
     padding: 10px 8px;
     width: 50px;
-    color: rgb(35, 17, 125);
-    background: rgb(93, 136, 169);
-    border: 1px solid #555;
+    color: rgb(255, 255, 255);
+    background:#000000(255, 255, 255);
+    border: 1px solid rgb(25, 75, 155);
     border-radius: 5px;
     text-align: center;
-    user-select: nome;
+    user-select: Começar;
     cursor: pointer;
     transition: 2s;
 }
