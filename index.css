@@ -1,20 +1,38 @@
-body{  background: linear-gradient(to right, #5198bb,#24238a);}
-
-.btn{
-    padding: 10px 8px;
-    width: 50px;
-    color: rgb(255, 255, 255);
-    background:#000000(255, 255, 255);
-    border: 1px solid rgb(25, 75, 155);
-    border-radius: 5px;
+body{  background: linear-gradient(to right, #5de0e6,#004aad);
     text-align: center;
-    user-select: Começar;
-    cursor: pointer;
-    transition: 2s;
 }
 
+.container{
+    background-color: brown;
+}
 
-.btn:hover{
-background: rgb(136, 198, 246);
+.comecar{
+    margin-top: 20px;
+}
 
-}   
+.botao-comecar{
+    padding: 20px;
+    background-color: pink;
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+    margin-top: 70px;
+}
+
+.img1 img{
+    width: 200px; 
+     
+}
+.img2 img{
+width: 300px;
+
+}
+.titulo strong {
+
+       color: black
+       
+    }
+.titulo  {
+        
+       color: #ffff;
+    }
