@@ -14,14 +14,19 @@ body{
     box-shadow: 5px 5px 1px black;
 }
 
-.qtd-participantes, 
-.qtd-jogadores{
+.qtd-times, 
+.qtd-max{
     width: 80px;
     height: 50px;
 }
 .nomes{
     width: 420px;
     height: 50px;
+}
+
+.nome-dos-jogadores , .jogadores-por-time,.qtd-maxima-jogadores h2{
+    color: white;
+    text-shadow: .5px 2px 2px black;
 }
 
 /*Utilitários*/
@@ -42,15 +47,20 @@ body{
     margin-right: auto;
  }
 
+
 @media screen and (min-width: 25rem){
     body{
-        background: linear-gradient(90deg,#8c52ff 10%,#5ce1e6);
+        background: rgb(2,0,36);
+        /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,22,116,1) 0%, rgba(0,212,255,1) 0%, rgba(48,62,145,1) 93%); */
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,22,116,1) 0%, rgba(0,212,255,1) 100%);
+        
     }  
 }
 
 @media screen and (min-width: 70rem){
     body{
-        background: linear-gradient(90deg,#8c52ff,#5ce1e6);
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,22,116,1) 0%, rgba(0,212,255,1) 100%);
     }
     
 

@@ -1,16 +1,13 @@
 body{  background: linear-gradient(to right, #5de0e6,#004aad);
-    text-align: center;
-}
-
-.container{
-    background-color: brown;
-}
-
-.comecar{
-    margin-top: 20px;
+        text-align: center;
+    /* align-items: center; */
 }
 
 .botao-comecar{
+    margin-top: 50px;
+}
+
+a{
     padding: 20px;
     background-color: pink;
     text-decoration: none;
@@ -24,15 +21,25 @@ body{  background: linear-gradient(to right, #5de0e6,#004aad);
      
 }
 .img2 img{
-width: 300px;
+    width: 300px;
 
 }
 .titulo strong {
 
-       color: black
-       
-    }
-.titulo  {
-        
-       color: #ffff;
-    }
+    color: black;
+    display: block;
+    
+}
+
+h1{
+
+    display: inline-block;
+    padding: 40px;
+    background-color: #0097A7; /* Substitua pela cor desejada */
+    color: #fff; /* Cor do texto */
+}
+.titulo  {     
+    color: #ffff;
+}
+
+
