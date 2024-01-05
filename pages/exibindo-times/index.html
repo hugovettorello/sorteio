@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Times</title>
+    <style>
+        /* Adicione estilos conforme necessário para os cards */
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            float: left;
+            box-sizing: border-box;
+            background-color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="../../styles/exibindo-times/style.css"
+</head>
+<body>
+
+    <script>
+        // Recupere os times e jogadores que ficarão de próximo do localStorage
+        var timesSorteados = JSON.parse(localStorage.getItem('timesSorteados')) || [];
+        var proximosJogadores = JSON.parse(localStorage.getItem('proximosJogadores')) || [];
+        
+
+        console.log("proximos: "+proximosJogadores)
+        // Função para criar os cards
+        function criarCards() {
+            var container = document.body; // Pode ajustar para o elemento desejado
+    
+            // Crie cards para os times
+            timesSorteados.forEach(function (time, index) {
+                var cardDeTimes = criarCard('Time ' + (index + 1), time);
+                container.appendChild(cardDeTimes);
+            });
+    
+            // Crie um card para os jogadores que ficarão de próximo
+            proximosJogadores.forEach(function (time, index) {
+                var cardDeProximos = criarCard('Próximos Jogadores: ', time);
+                container.appendChild(cardDeProximos);
+            });
+            
+        }
+    
+        // Função para criar um card
+        function criarCard(titulo, conteudo) {
+            var card = document.createElement('div');
+            card.className = 'card';
+    
+            // Adicione o título do card
+            var tituloElement = document.createElement('h2');
+            tituloElement.textContent = titulo;
+            card.appendChild(tituloElement);
+    
+            // Adicione o conteúdo do card
+            var conteudoElement = document.createElement('p');
+            conteudoElement.textContent = Array.isArray(conteudo) ? conteudo.join(', ') : conteudo;
+            card.appendChild(conteudoElement);
+    
+            return card;
+        }
+    
+        // Chame a função para criar os cards quando a página carregar
+        window.onload = criarCards;
+    </script>
+</body>
+</html>

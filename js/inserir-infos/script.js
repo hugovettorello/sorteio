@@ -1,11 +1,9 @@
 function recuperaValoresDosInputs(){
-    // var quantidade = document.getElementById('qtd-participantes').value;
     var times = document.getElementById('qtd-times').value;
     var nomes = document.getElementById('nome-dos-jogadores').value;
     var max = document.getElementById('qtd-max').value;
 
     return {
-        // quantidade: quantidade,
         times: times,
         nomes: nomes,
         max: max
@@ -40,11 +38,15 @@ function confereSeHaCamposVaziosOuNulos(){
 }
 
 function confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores(){
+    
+    let nomes = confereSeAQuantidadeDeJogadoresEOsNomesCoincidem()
+    
     var valores = recuperaValoresDosInputs();
+    let tamanhoNomes = nomes.length
 
-    if (valores.nomes.length < valores.max){
+    if (tamanhoNomes <= valores.max){
         alert("Não há jogadores suficientes para distribuir entre os times. Adicione mais nomes")
-        return null
+        throw 'erro'
     } 
 }
 
@@ -85,7 +87,7 @@ function verificaSeEhPossivelDividirOsTimes(){
     var valores = recuperaValoresDosInputs()
 
 
-    if (valores.quantidade < valores.times) {
+    if (valores.max < valores.times) {
         alert('Não há jogadores suficientes para distribuir entre os times.');
         return false;
     }
@@ -99,45 +101,57 @@ function sortearNomes() {
     var validacao = confereSeHaCamposVaziosOuNulos();
     var nomes = confereSeAQuantidadeDeJogadoresEOsNomesCoincidem();
     var recuperaValor = recuperaValoresDosInputs();
-    var validacaoNome = confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores();
+    var valoresBatem = confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores();
     var divisao = verificaSeEhPossivelDividirOsTimes();
     var qtdTimes = recuperaValor.times
-    var max = recuperaValor.max
-    // Verifica se o número de times é válido
-    if (qtdTimes <= 0 || qtdTimes > nomes.length) {
-      return "Número inválido de times";
-    }
-  
+    var quantidadeMaximaJogadores  = recuperaValor.max
+    
+   
+
 
     
-
     // Copia a array de nomes para não modificá-la diretamente
     let nomesCopia = [...nomes];
+    let proximos = []
   
     // Cria um array para armazenar os times
     let times = Array.from({ length: qtdTimes }, () => []);
-  
-    // Loop para distribuir os nomes aleatoriamente entre os times
-    while (nomesCopia.length > 0) {
+
+    console.log("NomesCopia: "+nomesCopia.length)
+    
+
+//Loop para distribuir os nomes aleatoriamente entre os times
+while (nomesCopia.length > 0) {
       for (let i = 0; i < qtdTimes && nomesCopia.length > 0; i++) {
         // Remove um nome aleatório da cópia e o adiciona ao time atual
-        if (times[i].length < max) {
-        
+        if (times[i].length < quantidadeMaximaJogadores) {
+             
             let nomeAleatorioIndex = Math.floor(Math.random() * nomesCopia.length);
             let nomeAleatorio = nomesCopia.splice(nomeAleatorioIndex, 1)[0];
-            times[i].push(nomeAleatorio);
+            times[i].push(nomeAleatorio)
         } else{
-            alert(`Próximos ${i + 1}: ${nomesCopia.join(', ')}`);
-            nomesCopia = [];
+            nomesCopia.join(', ')
+            proximos.push(nomesCopia)
+            nomesCopia = []
+            
         }
         
-      }
     }
-  
+}
+
     times.forEach((time, index) => {
-        alert(`Time ${index + 1}: ${time.join(', ')}`);
-    });
-    return(times);
+        time.join(', ')
+    })
+
+
+    localStorage.setItem('timesSorteados', JSON.stringify(times));
+    localStorage.setItem('proximosJogadores', JSON.stringify(proximos));
+
+    setTimeout(function () {
+        window.location.href = '../exibindo-times/index.html';
+    }, 4000);
+
+
   }
 
 
