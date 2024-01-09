@@ -1,17 +1,21 @@
 body{  background: linear-gradient(to right, #5de0e6,#004aad);
         text-align: center;
-    /* align-items: center; */
+    font-family:'Montserrat',sans-serif;
 }
 
-.botao-comecar{
+
+.botao-comecar{ 
+    
     margin-top: 50px;
 }
 
 a{
+    box-shadow: 5px 5px 1px black;
+    text-transform: uppercase;
     padding: 20px;
-    background-color: pink;
+    background-color:#2b588f;
     text-decoration: none;
-    color: black;
+    color: #fff;
     border-radius: 30px;
     margin-top: 70px;
 }
@@ -22,7 +26,7 @@ a{
 }
 .img2 img{
     width: 300px;
-
+    margin-top: 30px;
 }
 .titulo strong {
 
@@ -31,12 +35,14 @@ a{
     
 }
 
-h1{
 
+h1{
+    box-shadow: 5px 5px 1px black;
+    border-radius: 20px;
     display: inline-block;
     padding: 40px;
     background-color: #0097A7; /* Substitua pela cor desejada */
-    color: #fff; /* Cor do texto */
+    color: #fff; /* Cor do texto */  
 }
 .titulo  {     
     color: #ffff;
