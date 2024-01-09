@@ -50,6 +50,8 @@ function confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores(){
     } 
 }
 
+
+
 function confereSeHaCamposNegativos(){
     var valores = recuperaValoresDosInputs()
 
@@ -84,13 +86,24 @@ function confereSeAQuantidadeDeJogadoresEOsNomesCoincidem(){
 }
 
 function verificaSeEhPossivelDividirOsTimes(){
-    var valores = recuperaValoresDosInputs()
+        let nomes = confereSeAQuantidadeDeJogadoresEOsNomesCoincidem()
+        let valores = recuperaValoresDosInputs()
+    
+        quantidadeNomes = nomes.length
+        quantidadeTimes  = valores.times
 
-
-    if (valores.max < valores.times) {
-        alert('Não há jogadores suficientes para distribuir entre os times.');
-        return false;
-    }
+        alert("times: "+quantidadeTimes)
+        alert("nomes: "+quantidadeNomes)
+        alert("divisao: "+(quantidadeTimes / quantidadeNomes))
+        
+        // if(quantidadeTimes / quantidadeNomes  <= 0 || quantidadeTimes / quantidadeNomes < 1){
+        //     alert("Não é possível dividir os times igualmente.")
+        //     throw 'erro' 
+        // }
+        if(quantidadeNomes/quantidadeTimes   <= 0){
+            alert("Não é possível dividir os times igualmente.")
+            throw 'erro' 
+        }
 }
 
 
