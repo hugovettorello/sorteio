@@ -92,9 +92,6 @@ function verificaSeEhPossivelDividirOsTimes(){
         quantidadeNomes = nomes.length
         quantidadeTimes  = valores.times
 
-        alert("times: "+quantidadeTimes)
-        alert("nomes: "+quantidadeNomes)
-        alert("divisao: "+(quantidadeTimes / quantidadeNomes))
         
         // if(quantidadeTimes / quantidadeNomes  <= 0 || quantidadeTimes / quantidadeNomes < 1){
         //     alert("Não é possível dividir os times igualmente.")
@@ -162,7 +159,7 @@ while (nomesCopia.length > 0) {
 
     setTimeout(function () {
         window.location.href = '../exibindo-times/index.html';
-    }, 4000);
+    }, 2000);
 
 
   }

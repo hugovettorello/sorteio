@@ -3,7 +3,12 @@ body{
     /* background: radial-gradient(circle, rgba(238,174,202,1) 2%, rgba(15,125,254,1) 100%); */
     /* background: radial-gradient(circle, #0F2027 , #203A43, #2C5364); */
     /* background: linear-gradient(to right, #a8c0ff, #3f2b96); */
-    background: linear-gradient(to right, #373b44, #4286f4);
+    background: linear-gradient(to right, #373b44, #4286f4); 
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
     
 }
 .card {
@@ -29,3 +34,44 @@ body{
 .conteudo{
     font-family: 'Tektur', sans-serif;
 }
+
+footer{
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:#2b588f;
+    
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+@media screen and (min-width: 25rem){
+    .btn{
+        padding: 20px;
+        background-color: #2b588f;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        border-radius: 40px;
+        display: inline-block;
+        box-shadow: 5px 5px 1px black;
+        bottom: 50%;
+        left: 40%;
+        position: fixed;
+    }
+}
+
+  
+

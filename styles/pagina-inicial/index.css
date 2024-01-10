@@ -70,7 +70,7 @@ body {
 
 @media screen and (min-width: 10px){
     body{
-       background-image: url(../../img\ 5.jpeg);
+       background-image: url(../../img/imagem-reduzida.jpeg);
        max-width: 100%;
        text-align: center;
        font-family:'Montserrat',sans-serif;
@@ -80,11 +80,11 @@ body {
 }
 
 @media screen and (min-width: 1120px){
-    body{  background-image: url(../../img\ novo\ 4.jpg) ;
-        text-align: center;
-    font-family:'Montserrat',sans-serif;
-    background-size:cover;
-    max-width: 100%
+    body{  background-image: url(../../img/estadio.jpg) ;
+            text-align: center;
+            font-family:'Montserrat',sans-serif;
+            background-size:cover;
+            max-width: 100%
 }
     
 

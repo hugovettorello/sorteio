@@ -20,6 +20,13 @@ function criarCards() {
         var cardDeProximos = criarCard('Próximos Jogadores: ', time);
         container.appendChild(cardDeProximos);
     });
+
+    var sortearNovamenteButton = document.createElement('a');
+    sortearNovamenteButton.className = 'btn'
+    sortearNovamenteButton.href = "../../pages/inserindo-informacoes/index.html"
+    sortearNovamenteButton.textContent = 'Sortear novamente';
+    // sortearNovamenteButton.addEventListener('click', sortearNovamente);
+    container.appendChild(sortearNovamenteButton);
     
 }
 
@@ -42,6 +49,13 @@ function criarCard(titulo, conteudo) {
 
     return card;
 }
+
+// function sortearNovamente() {
+    
+//     setTimeout(function () {
+//         window.location.href = 'pages\exibindo-times\index.html';
+//     }, 2000);
+// }
 
 // Chame a função para criar os cards quando a página carregar
 window.onload = criarCards;
