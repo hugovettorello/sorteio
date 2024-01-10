@@ -1,7 +1,4 @@
-body{  background: linear-gradient(to right, #5de0e6,#004aad);
-        text-align: center;
-    font-family:'Montserrat',sans-serif;
-}
+
 
 
 .botao-comecar{ 
@@ -22,8 +19,7 @@ a{
 
 .img1 img{
     width: 200px; 
-     
-}
+     }
 
 
      .img2 img{
@@ -31,7 +27,7 @@ a{
         margin-top: 30px; }
 
 
-.titulo strong {
+     .titulo strong {
 
     color: black;
     display: block;
@@ -52,3 +48,44 @@ h1{
 }
 
 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nova-imagem {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nova-imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 10px){
+    body{
+       background-image: url(../../img\ 5.jpeg);
+       max-width: 100%;
+       text-align: center;
+       font-family:'Montserrat',sans-serif;
+       background-size:cover;
+       max-width: 100%
+    }  
+}
+
+@media screen and (min-width: 1120px){
+    body{  background-image: url(../../img\ novo\ 4.jpg) ;
+        text-align: center;
+    font-family:'Montserrat',sans-serif;
+    background-size:cover;
+    max-width: 100%
+}
+    
+
+}
