@@ -24,10 +24,13 @@ a{
     width: 200px; 
      
 }
-.img2 img{
-    width: 300px;
-    margin-top: 30px;
-}
+
+
+     .img2 img{
+        width: 300px;
+        margin-top: 30px; }
+
+
 .titulo strong {
 
     color: black;
