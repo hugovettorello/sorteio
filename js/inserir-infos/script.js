@@ -159,7 +159,7 @@ while (nomesCopia.length > 0) {
 
     setTimeout(function () {
         window.location.href = '../exibindo-times/index.html';
-    }, 2000);
+    }, 1000);
 
 
   }

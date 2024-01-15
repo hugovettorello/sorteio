@@ -21,12 +21,11 @@ function criarCards() {
         container.appendChild(cardDeProximos);
     });
 
-    var sortearNovamenteButton = document.createElement('a');
-    sortearNovamenteButton.className = 'btn'
-    sortearNovamenteButton.href = "../../pages/inserindo-informacoes/index.html"
-    sortearNovamenteButton.textContent = 'Sortear novamente';
-    // sortearNovamenteButton.addEventListener('click', sortearNovamente);
-    container.appendChild(sortearNovamenteButton);
+    var linkSortearNovamente = document.createElement('a');
+    linkSortearNovamente.textContent = 'Sortear Novamente';
+    linkSortearNovamente.href = '../../pages/inserindo-informacoes/index.html'; // Substitua '#' pelo link da página anterior ou deixe vazio se não souber
+    linkSortearNovamente.className = 'sortear-novamente';
+    container.appendChild(linkSortearNovamente);
     
 }
 
