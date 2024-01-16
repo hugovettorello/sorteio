@@ -1,9 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
 
 
 .botao-comecar{ 
     
     margin-top: 50px;
+    transition: transform 250ms;
+}
+
+.botao-comecar:hover{
+    transform: translateY(-10px);
 }
 
 a{
@@ -19,16 +29,16 @@ a{
 
 .img1 img{
     width: 200px; 
-     }
+}
 
 
-     .img2 img{
-        width: 300px;
-        margin-top: 30px; }
+.img2 img{
+    width: 300px;
+    margin-top: 30px; 
+}
 
 
-     .titulo strong {
-
+.titulo strong {
     color: black;
     display: block;
     
@@ -45,14 +55,6 @@ h1{
 }
 .titulo  {     
     color: #ffff;
-}
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 

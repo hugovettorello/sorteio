@@ -40,8 +40,6 @@ body{
         box-shadow: 5px 5px 1px black;
         text-transform: uppercase;
         padding: 20px;
-        /* background-color:#2b588f; */
-        /* background: linear-gradient(357deg, rgba(251,224,63,1) 0%, rgba(252,70,107,1) 100%); */
         text-decoration: none;
         background: linear-gradient(357deg, rgba(2,0,36,1) 0%, rgba(61,22,116,1) 0%, rgba(48,62,145,1) 41%, rgba(0,212,255,1) 100%);;
         color: #fff;
