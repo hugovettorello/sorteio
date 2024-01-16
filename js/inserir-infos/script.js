@@ -1,7 +1,7 @@
 function recuperaValoresDosInputs(){
-    var times = document.getElementById('qtd-times').value;
-    var nomes = document.getElementById('nome-dos-jogadores').value;
-    var max = document.getElementById('qtd-max').value;
+    let times = document.getElementById('qtd-times').value;
+    let nomes = document.getElementById('nome-dos-jogadores').value;
+    let max = document.getElementById('qtd-max').value;
 
     return {
         times: times,
@@ -12,27 +12,29 @@ function recuperaValoresDosInputs(){
 }
 
 function confereSeHaCamposVaziosOuNulos(){
-    var valores = recuperaValoresDosInputs();
+    let valores = recuperaValoresDosInputs();
     
 
     if(valores.nomes == ''){
+        // alert("Preencha os nomes dos jogadores!")
+        // return null
         alert("Preencha os nomes dos jogadores!")
-        return null
+        throw 'erro - nomes não preenchidos'
     }
 
     if(valores.times == ''){
         alert("Preencha a quantidade de times!")
-        return null
+        throw 'erro - quantidade de times não preenchidas'
     }
 
     if (valores.times == 0){
-        alert("O quantidade de times não pode ser 0!")
-        return null
+        alert("A quantidade de times não pode ser 0!")
+        throw 'erro'
     }
 
     if(valores.max == '' || valores.max == 0){
-        alert("A quantidade máxima de jogadores é inválida");
-        return null
+        alert("A quantidade máxima de jogadores é inválida")
+        throw 'erro'
     }
 
 }
@@ -41,7 +43,7 @@ function confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores(){
     
     let nomes = confereSeAQuantidadeDeJogadoresEOsNomesCoincidem()
     
-    var valores = recuperaValoresDosInputs();
+    let valores = recuperaValoresDosInputs();
     let tamanhoNomes = nomes.length
 
     if (tamanhoNomes <= valores.max){
@@ -53,7 +55,7 @@ function confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores(){
 
 
 function confereSeHaCamposNegativos(){
-    var valores = recuperaValoresDosInputs()
+    let valores = recuperaValoresDosInputs()
 
     if(valores.quantidade < 0){
         alert("A quantidade de participantes deve ser positiva!");
@@ -68,8 +70,8 @@ function confereSeHaCamposNegativos(){
 }
 
 function confereSeAQuantidadeDeJogadoresEOsNomesCoincidem(){
-    var inputNomes = document.getElementById('nome-dos-jogadores');
-    var nomes = inputNomes.value.split(',');
+    let inputNomes = document.getElementById('nome-dos-jogadores');
+    let nomes = inputNomes.value.split(',');
 
     nomes = nomes.map(function(nome) {
         return nome.trim();
@@ -79,7 +81,7 @@ function confereSeAQuantidadeDeJogadoresEOsNomesCoincidem(){
         return nome !== '';
     });
 
-    var quantidadeNomes = nomes.length;
+    let quantidadeNomes = nomes.length;
 
     return nomes
 
@@ -108,13 +110,13 @@ function verificaSeEhPossivelDividirOsTimes(){
 
 
 function sortearNomes() {
-    var validacao = confereSeHaCamposVaziosOuNulos();
-    var nomes = confereSeAQuantidadeDeJogadoresEOsNomesCoincidem();
-    var recuperaValor = recuperaValoresDosInputs();
-    var valoresBatem = confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores();
-    var divisao = verificaSeEhPossivelDividirOsTimes();
-    var qtdTimes = recuperaValor.times
-    var quantidadeMaximaJogadores  = recuperaValor.max
+    let validacao = confereSeHaCamposVaziosOuNulos();
+    let nomes = confereSeAQuantidadeDeJogadoresEOsNomesCoincidem();
+    let recuperaValor = recuperaValoresDosInputs();
+    let valoresBatem = confereSeOsNomesBatemComAQuantidadeMaximaDeJogadores();
+    let divisao = verificaSeEhPossivelDividirOsTimes();
+    let qtdTimes = recuperaValor.times
+    let quantidadeMaximaJogadores  = recuperaValor.max
     
    
 

@@ -11,8 +11,9 @@ body{
     background-color: #2b588f;
     border-radius: 2rem;
     color: white;
-    box-shadow: 5px 5px 1px black;
+    box-shadow: 5px 5px 1px black; 
 }
+
 
 .qtd-times, 
 .qtd-max{
