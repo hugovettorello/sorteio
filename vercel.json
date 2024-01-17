@@ -1,9 +1,7 @@
 {
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/pagina-incial", "dest": "/pages/pagina-inicial/index.html" }
-    
+      { "src": "/.*", "dest": "/pages/pagina-inicial/index.html" }
     ]
-
   }
   
