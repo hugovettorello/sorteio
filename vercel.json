@@ -1,7 +1,10 @@
 {
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/.*", "dest": "/pages/pagina-inicial/index.html" }
+      { "src": "/pagina-incial", "dest": "/pages/pagina-inicial/index.html" },
+      { "src": "/inserindo-informacoes", "dest": "/pages/inserindo-informacoes/index.html" },
+      { "src": "/exibindo-times", "dest": "/pages/exibindo-times/index.html" }
     ]
+
   }
   
